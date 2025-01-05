@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ProgressBarStyle" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <!-- Define as propriedades do estilo aqui -->
+        <item name="android:indeterminateTint">@color/azul_unifor</item>
+        <item name="android:progressTint">@color/azul_unifor</item>
+    </style>
+
+    <style name="ImageRoundedCorners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item> <!-- Ajuste o tamanho das bordas arredondadas conforme necessário -->
+    </style>
+
+    <style name="ImageCircle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item> <!-- Ajuste o tamanho das bordas arredondadas conforme necessário -->
+    </style>
+</resources>

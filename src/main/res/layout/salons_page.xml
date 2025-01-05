@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/branco_unifor"
+    tools:context=".SalonsPage" >
+
+    <!-- Barra Superior -->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/azul_unifor"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <ImageView
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/options_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:visibility="gone"
+        android:layout_alignParentEnd="true"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/options_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/options" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Barra Inferior -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/azul_unifor"
+        android:layout_alignParentBottom="true" >
+
+        <!-- Layout para botões -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <!-- Botão Home -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="95dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center" >
+
+                <Button
+                    android:id="@+id/homeButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/home" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Botão Bússola -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="95dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center" >
+
+                <Button
+                    android:id="@+id/compassButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selected_tab" />
+
+                <LinearLayout
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:orientation="vertical" >
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="5dp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/compass" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/selected" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Botão QR -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="95dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center" >
+
+                <Button
+                    android:id="@+id/qrButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/qr" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Botão Configurações -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="95dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center" >
+
+                <Button
+                    android:id="@+id/settingsButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:src="@drawable/settings" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:fontFamily="@font/folito_medium"
+        android:textSize="24sp"
+        android:text="@string/salons" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="60dp"
+        tools:listitem="@layout/salons_recycler_view"/>
+
+    <RelativeLayout
+        android:id="@+id/add"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:visibility="gone"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="95dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/circle_shape"
+        android:clickable="true">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/plus"/>
+    </RelativeLayout>
+
+    <!-- Tela de criação de salão -->
+    <FrameLayout
+        android:id="@+id/salon_creation_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:visibility="gone"
+        android:background="@color/bg_dimming" >
+
+        <RelativeLayout
+            android:id="@+id/salon_creation_card"
+            android:layout_width="380dp"
+            android:layout_height="340dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_corners_white" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp" />
+
+                <ImageView
+                    android:id="@+id/add_image"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:clickable="true"
+                    android:layout_gravity="center"
+                    android:background="@color/gray" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp" />
+
+                <EditText
+                    android:id="@+id/salon_creation_number"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/rounded_corners"
+                    android:hint="@string/salons_number"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/folito_light"
+                    android:padding="10dp" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp" />
+
+                <Button
+                    android:id="@+id/create_salon"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/button_rounded"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/folito_bold"
+                    android:textColor="@color/branco_unifor"
+                    android:text="@string/create_salon" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/leave_card"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:clickable="true" >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/x" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/error_prevention_background"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/bg_dimming" >
+
+        <RelativeLayout
+            android:id="@+id/error_prevention_card"
+            android:layout_width="320dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_corners_white" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp" />
+
+                <TextView
+                    android:id="@+id/error_prevention_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/folito_regular"
+                    android:textSize="20sp"
+                    android:text="@string/salon_leave_error_prevention" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rounded_bottom_corners">
+
+                    <Button
+                        android:id="@+id/cancel_button"
+                        android:layout_width="160dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@drawable/rounded_red_bottom_corners"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/folito_bold"
+                        android:textColor="@color/red"
+                        android:text="@string/no" />
+
+                    <Button
+                        android:id="@+id/confirm_button"
+                        android:layout_width="160dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/transparent"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/folito_bold"
+                        android:text="@string/yes" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/delete_error_prevention"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/bg_dimming" >
+
+        <RelativeLayout
+            android:id="@+id/delete_error_prevention_card"
+            android:layout_width="320dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_corners_white" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp" />
+
+                <TextView
+                    android:id="@+id/delete_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/folito_regular"
+                    android:textSize="20sp"
+                    android:text="@string/salon_delete_error_prevention" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rounded_bottom_corners">
+
+                    <Button
+                        android:id="@+id/cancel_delete_button"
+                        android:layout_width="160dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@drawable/rounded_red_bottom_corners"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/folito_bold"
+                        android:textColor="@color/red"
+                        android:text="@string/no" />
+
+                    <Button
+                        android:id="@+id/confirm_delete_button"
+                        android:layout_width="160dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/transparent"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/folito_bold"
+                        android:text="@string/yes" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="no">No</string>
+    <string name="yes">Si</string>
+    <string name="old_expositions">Exhibiciones Antiguas</string>
+    <string name="salons">Salón</string>
+    <string name="salons_number">Número de Salón</string>
+    <string name="create_salon">Crear Salón</string>
+    <string name="salon_leave_error_prevention">¿Estás seguro de que quieres dejar de crear salón?</string>
+    <string name="salon_delete_error_prevention">"¿Estás seguro de que deseas eliminar el Salón "</string>
+    <string name="salon_edit_error_prevention">¿Estás seguro de que quieres abandonar la edición del salón?</string>
+    <string name="edit_salon">Editar Salón</string>
+    <string name="qr_reader">Lector QR</string>
+    <string name="qr_code_description">Acerque la cámara de su teléfono celular al código QR para escanear las obras.</string>
+    <string name="camera_off">Desactivar cámara</string>
+    <string name="camera_on">Activar cámara</string>
+    <string name="settings">Ajustes</string>
+    <string name="languages">Idiomas</string>
+    <string name="notifications">Notificaciones</string>
+    <string name="contact_support">Soporte/Contacto</string>
+    <string name="email">E-mail: example@unifor.br</string>
+    <string name="phone">Teléfono: (85) 98765–4321</string>
+    <string name="arts">Obras</string>
+    <string name="arts_name">Nombre de la obra</string>
+    <string name="arts_year">Año</string>
+    <string name="arts_author">Autor</string>
+    <string name="arts_description_en">Descripción EN</string>
+    <string name="arts_description_es">Descripción</string>
+    <string name="arts_description_pt">Descripción PT</string>
+    <string name="arts_description">Descripción</string>
+    <string name="create_art">Crear Obra</string>
+    <string name="art_leave_error_prevention">¿Estás seguro de que quieres dejar de crear la obra?</string>
+    <string name="art_delete_error_prevention">"¿Estás seguro de que deseas eliminar la obra "</string>
+    <string name="art_edit_error_prevention">¿Estás seguro de que quieres dejar de editar la obra?</string>
+    <string name="edit_art">Editar Obra</string>
+    <string name="artists">Artistas</string>
+    <string name="artists_name">Nombre del Artista</string>
+    <string name="artists_biography">Biografía</string>
+    <string name="create_artist">Crear Artista</string>
+    <string name="artist_leave_error_prevention">¿Estás seguro de que deseas cancelar la creación del artista?</string>
+    <string name="artist_delete_error_prevention">"¿Estás seguro de que deseas eliminar el artista "</string>
+    <string name="artist_edit_error_prevention">¿Estás seguro de que quieres salir de la edición de artista?</string>
+    <string name="edit_artist">Editar Artista</string>
+    <string name="enter_as_adm">Iniciar sesión como administrador</string>
+    <string name="login">Login</string>
+    <string name="password">Contraseña</string>
+    <string name="show_password">Mostrar Contraseña</string>
+    <string name="access">Acceder</string>
+</resources>

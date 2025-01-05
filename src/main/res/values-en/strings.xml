@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="old_expositions">Old Expositions</string>
+    <string name="salons">Salons</string>
+    <string name="salons_number">Salon Number</string>
+    <string name="create_salon">Create Salon</string>
+    <string name="salon_leave_error_prevention">Are you sure you want to quit salon creation?</string>
+    <string name="salon_delete_error_prevention">"Are you sure you want to delete the Salon "</string>
+    <string name="salon_edit_error_prevention">Are you sure you want to leave the salon edition?</string>
+    <string name="edit_salon">Edit Salon</string>
+    <string name="qr_reader">QR Reader</string>
+    <string name="qr_code_description">Bring your cell phone\'s camera close to the QR code to scan arts.</string>
+    <string name="camera_off">Camera OFF</string>
+    <string name="camera_on">Camera ON</string>
+    <string name="settings">Settings</string>
+    <string name="languages">Languages</string>
+    <string name="notifications">Notifications</string>
+    <string name="contact_support">Support/Contact</string>
+    <string name="email">E-mail: example@unifor.br</string>
+    <string name="phone">Phone: (85) 98765–4321</string>
+    <string name="arts">Arts</string>
+    <string name="arts_name">Art\'s Name</string>
+    <string name="arts_year">Art\'s Year</string>
+    <string name="arts_author">Art\'s Author</string>
+    <string name="arts_description_en">Description</string>
+    <string name="arts_description_es">Description ES</string>
+    <string name="arts_description_pt">Description PT</string>
+    <string name="arts_description">Art\'s Description</string>
+    <string name="create_art">Create Art</string>
+    <string name="art_leave_error_prevention">Are you sure you want to stop creating the art?</string>
+    <string name="art_delete_error_prevention">"Are you sure you want to delete the art "</string>
+    <string name="art_edit_error_prevention">Are you sure you want to stop editing the work?</string>
+    <string name="edit_art">Edit Art</string>
+    <string name="artists">Artists</string>
+    <string name="artists_name">Artist\'s Name</string>
+    <string name="artists_biography">Artist\'s Biography</string>
+    <string name="create_artist">Create Artist</string>
+    <string name="artist_leave_error_prevention">Are you sure you want to opt out of the artist\'s creation?</string>
+    <string name="artist_delete_error_prevention">"Are you sure you want to delete the artist "</string>
+    <string name="artist_edit_error_prevention">Are you sure you want to exit artist editing?</string>
+    <string name="edit_artist">Edit Artist</string>
+    <string name="enter_as_adm">Enter as Administrator</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="show_password">Show Password</string>
+    <string name="access">Acess</string>
+</resources>

@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/branco_unifor"
+    tools:context=".ArtsPage" >
+
+    <!-- Barra Superior -->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/azul_unifor"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <ImageView
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="60dp"
+        android:layout_height="60dp" >
+
+        <Button
+            android:id="@+id/return_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent" />
+
+        <ImageView
+            android:visibility="visible"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/return_arrow" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/options_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:visibility="gone"
+        android:layout_alignParentEnd="true"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/options_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/options" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:fontFamily="@font/folito_medium"
+        android:textSize="24sp"
+        android:text="@string/arts" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        tools:listitem="@layout/arts_recycler_view"/>
+
+    <RelativeLayout
+        android:id="@+id/add"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:visibility="gone"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="35dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/circle_shape" >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/plus"/>
+    </RelativeLayout>
+
+    <!-- Tela de criação de obra -->
+    <FrameLayout
+        android:id="@+id/art_creation_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:visibility="gone"
+        android:background="@color/bg_dimming" >
+
+        <RelativeLayout
+            android:id="@+id/art_creation_card"
+            android:layout_width="380dp"
+            android:layout_height="605dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_corners_white" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp" />
+
+                <ImageView
+                    android:id="@+id/add_image"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:background="@color/gray" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp" />
+
+                <EditText
+                    android:id="@+id/art_name"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/rounded_corners"
+                    android:hint="@string/arts_name"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/folito_light"
+                    android:padding="10dp" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="5dp" />
+
+                <EditText
+                    android:id="@+id/art_year"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/rounded_corners"
+                    android:hint="@string/arts_year"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/folito_light"
+                    android:padding="10dp" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="5dp" />
+
+                <EditText
+                    android:id="@+id/art_author"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/rounded_corners"
+                    android:hint="@string/arts_author"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/folito_light"
+                    android:padding="10dp" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="5dp" />
+
+                <EditText
+                    android:id="@+id/art_description"
+                    android:layout_width="300dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/rounded_corners"
+                    android:hint="@string/arts_description_pt"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/folito_light"
+                    android:padding="10dp" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp" />
+
+                <Button
+                    android:id="@+id/create_art"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/button_rounded"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/folito_bold"
+                    android:textColor="@color/branco_unifor"
+                    android:text="@string/create_art" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/leave_card"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:clickable="true" >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/x" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/error_prevention_background"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/bg_dimming" >
+
+        <RelativeLayout
+            android:id="@+id/error_prevention_card"
+            android:layout_width="320dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_corners_white" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp" />
+
+                <TextView
+                    android:id="@+id/error_prevention_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/folito_regular"
+                    android:textSize="20sp"
+                    android:text="@string/artist_leave_error_prevention" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rounded_bottom_corners">
+
+                    <Button
+                        android:id="@+id/cancel_button"
+                        android:layout_width="160dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@drawable/rounded_red_bottom_corners"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/folito_bold"
+                        android:textColor="@color/red"
+                        android:text="@string/no" />
+
+                    <Button
+                        android:id="@+id/confirm_button"
+                        android:layout_width="160dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/transparent"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/folito_bold"
+                        android:text="@string/yes" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/delete_error_prevention"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/bg_dimming" >
+
+        <RelativeLayout
+            android:id="@+id/delete_error_prevention_card"
+            android:layout_width="320dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_corners_white" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp" />
+
+                <TextView
+                    android:id="@+id/delete_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/folito_regular"
+                    android:textSize="20sp"
+                    android:text="@string/art_delete_error_prevention" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rounded_bottom_corners">
+
+                    <Button
+                        android:id="@+id/cancel_delete_button"
+                        android:layout_width="160dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@drawable/rounded_red_bottom_corners"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/folito_bold"
+                        android:textColor="@color/red"
+                        android:text="@string/no" />
+
+                    <Button
+                        android:id="@+id/confirm_delete_button"
+                        android:layout_width="160dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/transparent"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/folito_bold"
+                        android:text="@string/yes" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>

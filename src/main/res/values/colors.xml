@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_but_a_little_darker">#CFCFCF</color>
+    <color name="gray">#808080</color>
+    <color name="red">#B20000</color>
+    <color name="light_red">#FF9999</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="bg_dimming">#96404040</color>
+    <color name="bg_stronger_dimming">#E6252525</color>
+    <color name="selected_tab">#30000000</color>
+    <color name="azul_unifor">#044CF4</color>
+    <color name="branco_unifor">#E4F2FE</color>
+    <color name="cinza_unifor">#C0D4E2</color>
+    <color name="settings_rectangle_bg">#BACBFF</color>
+    <color name="settings_rectangle_bg_alt">#D4DEFF</color>
+</resources>
